@@ -54,9 +54,9 @@ export default function Header() {
             <ChevronLeft strokeWidth={1.4} />
           </div>
           <div className="flex flex-col max-sm:items-center">
-            Luke Berry
+            Guilherme de Liz do Nascimento
             <span className="text-zinc-500 dark:text-zinc-400">
-              Software Engineer
+              Web Developer
             </span>
           </div>
         </Link>
@@ -91,7 +91,7 @@ export default function Header() {
             />
           </Link>
           <Link
-            className="group relative rounded px-2 py-px ring-1 ring-sky-500 ring-opacity-0 transition-all sm:hover:ring-opacity-100 dark:ring-sky-600 dark:ring-opacity-0"
+            className="group relative hidden rounded px-2 py-px ring-1 ring-sky-500 ring-opacity-0 transition-all sm:hover:ring-opacity-100 dark:ring-sky-600 dark:ring-opacity-0"
             href="/articles"
             aria-label="View articles"
             aria-current={path.startsWith("/articles") ? "page" : undefined}
