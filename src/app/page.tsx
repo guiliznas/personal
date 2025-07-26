@@ -120,17 +120,6 @@ export default function HomePage() {
 
       <div className="flex justify-center gap-6 max-sm:flex-col-reverse sm:justify-between">
         <div className="flex flex-col justify-center gap-4 max-sm:items-center">
-          <div className="group -m-8 flex select-all items-center gap-3 p-8 transition-all">
-            nascimentog.dev@gmail.com
-            <div className="inline-flex items-center gap-3">
-              <a
-                href="mailto:nascimentog.dev@gmail.com"
-                className="text-zinc-800 dark:text-zinc-200"
-              >
-                <Send strokeWidth={1.4} className="size-4" />
-              </a>
-            </div>
-          </div>
           <span className="-mt-2 inline-flex w-fit items-center gap-1 rounded-full bg-green-100 px-2 py-0.5 text-sm text-green-600 ring-1 ring-green-500 dark:bg-transparent dark:text-emerald-500 dark:ring-emerald-500">
             <div className="size-2 animate-pulse rounded-full bg-green-500 dark:bg-emerald-500" />
             Online
