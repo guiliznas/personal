@@ -2,7 +2,7 @@ import { GitBranch, Globe } from "lucide-react";
 import Image from "next/image";
 import { ReactNode } from "react";
 
-export interface ProjetoDetalhes {
+interface ProjetoDetalhes {
   id: string;
   nome: string;
   descricao: string;
@@ -14,7 +14,7 @@ export interface ProjetoDetalhes {
 }
 
 // Dados de exemplo - em um caso real, você buscaria do seu backend ou CMS
-export const projetosData: Record<string, ProjetoDetalhes> = {
+const projetosData: Record<string, ProjetoDetalhes> = {
   pace: {
     id: "pace",
     nome: "Calculadora de Pace",
