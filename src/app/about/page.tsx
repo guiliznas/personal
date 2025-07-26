@@ -6,9 +6,10 @@ export default function AboutPage() {
       </h1>
       <article>
         <p>
-          I'm a full-stack developer who has been studying programming since
-          2013 and working professionally in the field since 2017. My journey in
-          technology began with a technical course in Computer Science at{" "}
+          I&apos;m a full-stack developer who has been studying programming
+          since 2013 and working professionally in the field since 2017. My
+          journey in technology began with a technical course in Computer
+          Science at{" "}
           <a href="https://ifc.edu.br/">Federal Institute of Santa Catarina</a>,
           which I completed in 2016.
         </p>
@@ -20,11 +21,11 @@ export default function AboutPage() {
           growth.
         </p>
         <p>
-          Since May 2018, I've been working as a full-stack developer at AAWZ,
-          where I have experience in developing and supporting web platforms and
-          mobile applications, using technologies such as VueJS, React Native,
-          Python, and Flask. Currently, I also work in project management and
-          technical leadership.
+          Since May 2018, I&apos;ve been working as a full-stack developer at
+          AAWZ, where I have experience in developing and supporting web
+          platforms and mobile applications, using technologies such as VueJS,
+          React Native, Python, and Flask. Currently, I also work in project
+          management and technical leadership.
         </p>
         <p>
           I graduated with a degree in{" "}
@@ -51,8 +52,8 @@ export default function AboutPage() {
           communication, and complex problem-solving.
         </p>
         <p>
-          I'm always looking for new challenges and learning opportunities in
-          the field of software development.
+          I&apos;m always looking for new challenges and learning opportunities
+          in the field of software development.
         </p>
         <p>
           If you want to get in touch, find me on{" "}
