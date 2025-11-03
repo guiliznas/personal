@@ -15,6 +15,21 @@ interface ProjetoDetalhes {
 
 // Dados de exemplo - em um caso real, você buscaria do seu backend ou CMS
 const projetosData: Record<string, ProjetoDetalhes> = {
+  deviceLab: {
+    id: "device-lab",
+    nome: "Device Lab",
+    descricao:
+      "Ferramenta para testar dispositivos como microfone, saida de som e webcam.",
+    descricaoLonga: ``,
+    tecnologias: ["React", "Tailwind", "Vite"],
+    imagens: [
+      "/assets/images/device-lab/home.png",
+      "/assets/images/device-lab/camera.png",
+      "/assets/images/device-lab/mic.png",
+    ],
+    link: "https://device-lab.ziltro.dev",
+    repositorio: "https://github.com/guiliznas/device-check-lab",
+  },
   pace: {
     id: "pace",
     nome: "Calculadora de Pace",
