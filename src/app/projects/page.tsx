@@ -17,7 +17,7 @@ interface ProjetoDetalhes {
 const projetosData: Record<string, ProjetoDetalhes> = {
   lume: {
     id: "lume",
-    nome: "Lume (BibleScroll)",
+    nome: "Lume",
     descricao:
       "Leia a Bíblia um versículo por vez, com scroll vertical, como alternativa ao scroll infinito das redes sociais.",
     descricaoLonga: ``,
