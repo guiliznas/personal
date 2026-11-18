@@ -15,6 +15,37 @@ interface ProjetoDetalhes {
 
 // Dados de exemplo - em um caso real, você buscaria do seu backend ou CMS
 const projetosData: Record<string, ProjetoDetalhes> = {
+  lume: {
+    id: "lume",
+    nome: "Lume",
+    descricao:
+      "Leia a Bíblia um versículo por vez, com scroll vertical, como alternativa ao scroll infinito das redes sociais.",
+    descricaoLonga: ``,
+    tecnologias: ["React Native", "Expo", "TypeScript", "Fastify", "Postgres"],
+    imagens: ["/assets/images/lume/home.png"],
+    link: "https://bible.o.ziltro.dev",
+  },
+  clubePro: {
+    id: "clube-pro",
+    nome: "Clube Pro",
+    descricao:
+      "Conecta pessoas de comunidades (igrejas, clubes, condomínios) e ajuda a encontrar profissionais do grupo.",
+    descricaoLonga: ``,
+    tecnologias: ["React", "Vite", "TypeScript", "TailwindCSS", "Firebase"],
+    imagens: ["/assets/images/clube-pro/home.png"],
+    link: "https://clubepro.ziltro.dev",
+  },
+  zNotes: {
+    id: "z-notes",
+    nome: "Z-Notes",
+    descricao:
+      "App de notas em markdown com três colunas, busca full-text e espelho em arquivos .md.",
+    descricaoLonga: ``,
+    tecnologias: ["React", "Vite", "TailwindCSS", "Fastify", "SQLite"],
+    imagens: ["/assets/images/z-notes/login.png"],
+    link: "https://notes.o.ziltro.dev",
+    repositorio: "https://github.com/guiliznas/z-notes",
+  },
   deviceLab: {
     id: "device-lab",
     nome: "Device Lab",
@@ -122,7 +153,7 @@ interface Project {
   name: string;
   description: string;
   imageUrl: string;
-  githubUrl: string;
+  githubUrl?: string;
   url: string;
   technologies: ReactNode;
 }
@@ -143,6 +174,12 @@ function renderTechnologies(techs: string[]) {
     CSS: { bg: "[#1572B6]", text: "zinc-100" },
     JavaScript: { bg: "[#F7DF1E]", text: "zinc-950" },
     LocalStorage: { bg: "[#808080]", text: "zinc-100" },
+    "React Native": { bg: "[#00D8FE]", text: "zinc-950" },
+    Expo: { bg: "black", text: "zinc-100" },
+    Fastify: { bg: "black", text: "zinc-100" },
+    Postgres: { bg: "[#336791]", text: "zinc-100" },
+    Firebase: { bg: "[#FFCA28]", text: "zinc-950" },
+    SQLite: { bg: "[#003B57]", text: "zinc-100" },
   };
 
   return (
@@ -170,7 +207,7 @@ const projects: Project[] = Object.values(projetosData).map((projeto) => ({
   name: projeto.nome,
   description: projeto.descricao,
   imageUrl: projeto.imagens[0].split("?")[0], // Remove query parameters
-  githubUrl: projeto.repositorio || "#",
+  githubUrl: projeto.repositorio,
   url: projeto.link || "#",
   technologies: renderTechnologies(projeto.tecnologias),
 }));
@@ -210,13 +247,15 @@ function ProjectCard({
         >
           <Globe strokeWidth={1.4} className="size-5" /> Visit website
         </a>
-        <a
-          href={githubUrl}
-          target="_blank"
-          className="flex grow items-center justify-center gap-2 py-4 transition-all sm:hover:bg-zinc-200 sm:dark:hover:bg-zinc-800"
-        >
-          <GitBranch strokeWidth={1.4} className="size-5" /> View code
-        </a>
+        {githubUrl && (
+          <a
+            href={githubUrl}
+            target="_blank"
+            className="flex grow items-center justify-center gap-2 py-4 transition-all sm:hover:bg-zinc-200 sm:dark:hover:bg-zinc-800"
+          >
+            <GitBranch strokeWidth={1.4} className="size-5" /> View code
+          </a>
+        )}
       </div>
     </div>
   );
