@@ -15,6 +15,39 @@ interface ProjetoDetalhes {
 
 // Dados de exemplo - em um caso real, você buscaria do seu backend ou CMS
 const projetosData: Record<string, ProjetoDetalhes> = {
+  lume: {
+    id: "lume",
+    nome: "Lume (BibleScroll)",
+    descricao:
+      "Leia a Bíblia um versículo por vez, com scroll vertical, como alternativa ao scroll infinito das redes sociais.",
+    descricaoLonga: ``,
+    tecnologias: ["React Native", "Expo", "TypeScript", "Fastify", "Postgres"],
+    imagens: ["/assets/images/lume/home.png"],
+    link: "https://bible.o.ziltro.dev",
+    repositorio: "https://github.com/guiliznas/biblescroll",
+  },
+  clubePro: {
+    id: "clube-pro",
+    nome: "Clube Pro",
+    descricao:
+      "Conecta pessoas de comunidades (igrejas, clubes, condomínios) e ajuda a encontrar profissionais do grupo.",
+    descricaoLonga: ``,
+    tecnologias: ["React", "Vite", "TypeScript", "TailwindCSS", "Firebase"],
+    imagens: ["/assets/images/clube-pro/home.png"],
+    link: "https://clubepro.ziltro.dev",
+    repositorio: "https://github.com/guiliznas/clube-pro",
+  },
+  zNotes: {
+    id: "z-notes",
+    nome: "Z-Notes",
+    descricao:
+      "App de notas em markdown com três colunas, busca full-text e espelho em arquivos .md.",
+    descricaoLonga: ``,
+    tecnologias: ["React", "Vite", "TailwindCSS", "Fastify", "SQLite"],
+    imagens: ["/assets/images/z-notes/login.png"],
+    link: "https://notes.o.ziltro.dev",
+    repositorio: "https://github.com/guiliznas/z-notes",
+  },
   deviceLab: {
     id: "device-lab",
     nome: "Device Lab",
@@ -143,6 +176,12 @@ function renderTechnologies(techs: string[]) {
     CSS: { bg: "[#1572B6]", text: "zinc-100" },
     JavaScript: { bg: "[#F7DF1E]", text: "zinc-950" },
     LocalStorage: { bg: "[#808080]", text: "zinc-100" },
+    "React Native": { bg: "[#00D8FE]", text: "zinc-950" },
+    Expo: { bg: "black", text: "zinc-100" },
+    Fastify: { bg: "black", text: "zinc-100" },
+    Postgres: { bg: "[#336791]", text: "zinc-100" },
+    Firebase: { bg: "[#FFCA28]", text: "zinc-950" },
+    SQLite: { bg: "[#003B57]", text: "zinc-100" },
   };
 
   return (
