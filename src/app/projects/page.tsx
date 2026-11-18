@@ -24,7 +24,6 @@ const projetosData: Record<string, ProjetoDetalhes> = {
     tecnologias: ["React Native", "Expo", "TypeScript", "Fastify", "Postgres"],
     imagens: ["/assets/images/lume/home.png"],
     link: "https://bible.o.ziltro.dev",
-    repositorio: "https://github.com/guiliznas/biblescroll",
   },
   clubePro: {
     id: "clube-pro",
@@ -35,7 +34,6 @@ const projetosData: Record<string, ProjetoDetalhes> = {
     tecnologias: ["React", "Vite", "TypeScript", "TailwindCSS", "Firebase"],
     imagens: ["/assets/images/clube-pro/home.png"],
     link: "https://clubepro.ziltro.dev",
-    repositorio: "https://github.com/guiliznas/clube-pro",
   },
   zNotes: {
     id: "z-notes",
@@ -155,7 +153,7 @@ interface Project {
   name: string;
   description: string;
   imageUrl: string;
-  githubUrl: string;
+  githubUrl?: string;
   url: string;
   technologies: ReactNode;
 }
@@ -209,7 +207,7 @@ const projects: Project[] = Object.values(projetosData).map((projeto) => ({
   name: projeto.nome,
   description: projeto.descricao,
   imageUrl: projeto.imagens[0].split("?")[0], // Remove query parameters
-  githubUrl: projeto.repositorio || "#",
+  githubUrl: projeto.repositorio,
   url: projeto.link || "#",
   technologies: renderTechnologies(projeto.tecnologias),
 }));
@@ -249,13 +247,15 @@ function ProjectCard({
         >
           <Globe strokeWidth={1.4} className="size-5" /> Visit website
         </a>
-        <a
-          href={githubUrl}
-          target="_blank"
-          className="flex grow items-center justify-center gap-2 py-4 transition-all sm:hover:bg-zinc-200 sm:dark:hover:bg-zinc-800"
-        >
-          <GitBranch strokeWidth={1.4} className="size-5" /> View code
-        </a>
+        {githubUrl && (
+          <a
+            href={githubUrl}
+            target="_blank"
+            className="flex grow items-center justify-center gap-2 py-4 transition-all sm:hover:bg-zinc-200 sm:dark:hover:bg-zinc-800"
+          >
+            <GitBranch strokeWidth={1.4} className="size-5" /> View code
+          </a>
+        )}
       </div>
     </div>
   );
